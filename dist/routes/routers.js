@@ -1,1 +1,30 @@
+"use strict";
 /** @format */
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var userController_1 = __importDefault(require("../controllers/userController"));
+var toursController_1 = __importDefault(require("../controllers/toursController"));
+var reviewsController_1 = __importDefault(require("../controllers/reviewsController"));
+var reservationsController_1 = __importDefault(require("../controllers/reservationsController"));
+var authMiddleware_1 = __importDefault(require("../middleware/authMiddleware"));
+var checkRoleMiddleware_1 = __importDefault(require("../middleware/checkRoleMiddleware"));
+var router = (0, express_1.Router)();
+router.post("/registration", userController_1.default.registration);
+router.post("/login", userController_1.default.login);
+router.get("/check", authMiddleware_1.default, userController_1.default.check);
+router.post("/createTours", checkRoleMiddleware_1.default, toursController_1.default.create);
+router.get("/getAllTours", toursController_1.default.getAll);
+router.get("/getAllTours", toursController_1.default.getOne);
+router.delete("/deleteTours", toursController_1.default.delete);
+router.post("/createReviews", checkRoleMiddleware_1.default, reviewsController_1.default.create);
+router.get("/getAllReviews", reviewsController_1.default.getAll);
+router.get("/getAllReviews", reviewsController_1.default.getOne);
+router.delete("/deleteReviews", reviewsController_1.default.delete);
+router.post("/createReservations", checkRoleMiddleware_1.default, reservationsController_1.default.create);
+router.get("/getAllReservations", reservationsController_1.default.getAll);
+router.get("/getAllReservations", reservationsController_1.default.getOne);
+router.delete("/deleteReservations", reservationsController_1.default.delete);
+exports.default = router;

@@ -1,0 +1,24 @@
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","message":"Server work 5000"}
+{"level":"error","message":"error"}
+{"level":"info","message":"info"}
+{"level":"info","name":"SequelizeConnectionError","original":{"code":"3D000","file":"postinit.c","length":109,"line":"943","name":"error","routine":"InitPostgres","severity":"FATAL"},"parent":{"code":"3D000","file":"postinit.c","length":109,"line":"943","name":"error","routine":"InitPostgres","severity":"FATAL"}}
